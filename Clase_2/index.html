@@ -1,115 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi CV</title>
-    <link rel="icon" type="image/png" href="https://www.ufm.edu/wp-content/uploads/2020/10/arreglo-ufm.png">
+    <title>Mi CV - Victor Saravia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Header -->
     <header>
         <h1>Mi CV: Victor Saravia</h1>
-        <img src="WhatsApp-Image-2025-08-12-at-16.42.37.png" alt="Foto personal" width="150">
-        <div>
-            <img src="https://colab.ufm.edu/cs50/wp-content/uploads/2019/10/logo-UFM.png" alt="Logo UFM" width="150">
-        </div>
+        <img src="WhatsApp-Image-2025-08-12-at-16.42.37.png" alt="Foto personal" class="foto-personal">
+        <img src="https://colab.ufm.edu/cs50/wp-content/uploads/2019/10/logo-UFM.png" alt="Logo UFM" class="logo-ufm">
     </header>
 
-
-    <section id="educacion">
+    <!-- Educación -->
+    <section>
         <h2>Educación</h2>
-        <table border="1">
-            <caption>Formación Académica (Estudios)</caption>
+        <table>
+            <caption>Historial Académico</caption>
             <thead>
                 <tr>
-                    <th scope="col">Año</th>
-                    <th scope="col">Institución</th>
-                    <th scope="col">Título obtenido</th>
+                    <th>Institución</th>
+                    <th>Año</th>
+                    <th>Título</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>2023</td>
-                    <td>Colegio Decroly Americano</td>
-                    <td>Bachillerato en Ciencias y Letras</td>
-                </tr>
-                <tr>
-                    <td>2024 - Presente</td>
                     <td>Universidad Francisco Marroquín</td>
+                    <td>2024 - Presente</td>
                     <td>Ingeniería en Ciencias de la Computación</td>
                 </tr>
+                <tr>
+                    <td>Colegio Decroly Americano</td>
+                    <td>2012 - 2023</td>
+                    <td>Bachillerato en Ciencias y Letras</td>
+                </tr>
             </tbody>
         </table>
     </section>
 
-    
-
-
-    <section id="experiencia">
-        <h2>Experiencia Laboral</h2>
-        <table border="1">
-            <caption>Experiencia Laboral y Prácticas Profesionales</caption>
+    <!-- Idiomas -->
+    <section>
+        <h2>Idiomas</h2>
+        <table>
             <thead>
                 <tr>
-                    <th scope="col">Período</th>
-                    <th scope="col">Empresa</th>
-                    <th scope="col">Puesto</th>
+                    <th>Idioma</th>
+                    <th>Nivel</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>2024-2025</td>
-                    <td>Startup Tech Guatemala</td>
-                    <td>Asistente de Desarrollo</td>
+                    <td>Español</td>
+                    <td>Nativo</td>
                 </tr>
                 <tr>
-                    <td>2025-Presente</td>
-                    <td>Freelance</td>
-                    <td>Programador Python</td>
+                    <td>Inglés</td>
+                    <td>Avanzado (C1)</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-    
-
-
+    <!-- Experiencia -->
     <section>
-        <h2>Hard Skills</h2>
-        <ul>
-            <li>Lenguajes de Programación: Python</li>
-            <li>Idiomas: Español e Inglés</li>
-        </ul>
+        <h2>Experiencia</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Cargo</th>
+                    <th>Periodo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Proyecto Arduino</td>
+                    <td>Desarrollador</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>Diseño Web</td>
+                    <td>Freelancer</td>
+                    <td>2024</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
-    
+    <!-- Skills -->
     <section>
         <h2>Soft Skills</h2>
-        <ul>
-            <li>Empatía</li>
-            <li>Compromiso</li>
-            <li>Responsabilidad</li>
-            <li>Disciplina</li>
-            <li>Resiliencia</li>
-        </ul>
+        <div class="skills">
+            <span class="tag">Comunicación</span>
+            <span class="tag">Liderazgo</span>
+            <span class="tag">Trabajo en equipo</span>
+            <span class="tag">Resolución de problemas</span>
+        </div>
+
+        <h2>Hard Skills</h2>
+        <div class="skills">
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+            <span class="tag">HTML & CSS</span>
+            <span class="tag">Arduino</span>
+        </div>
     </section>
 
-<section id="contacto">
-    <h2>Contact INFO</h2>
-    <p><a href="mailto:victorsaravia@ufm.edu"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDlvRQVEe1AEvAUI0xD9JVnsDLAAnulRBxYQ&s" style="width: 60px; height: 60px;"></a></p>
-    <p><a href="https://github.com/VictorSaraviaUFM"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" style="width: 60px; height: 60px;"></a></p>
-    <p><a href="https://www.linkedin.com/in/victor-saravia-75724937a/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/500px-LinkedIn_logo_initials.png" style="width: 60px; height: 60px;"></a></p>
-</section>
-
+    <!-- Contact Info -->
     <footer>
-        <a href="VictorSaraviaCV.pdf" download>
-            <button>📄 Click aquí para descargar CV en PDF</button>
-        </a>
+        <h2>Contact Info</h2>
+        <hr>
+        <div class="contact-buttons">
+            <a href="mailto:victorsaravia@ufm.edu"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDlvRQVEe1AEvAUI0xD9JVnsDLAAnulRBxYQ&s" style="width: 60px; height: 60px;"></a>
+            <a href="https://github.com/VictorSaraviaUFM"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" style="width: 60px; height: 60px;"></a>
+            <a href="https://www.linkedin.com/in/victor-saravia-75724937a/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/500px-LinkedIn_logo_initials.png" style="width: 60px; height: 60px;"></a>
+        </div>
+
+        <button onclick="window.print()">Descargar PDF</button>
+        <button id="dark-mode-toggle">Dark Mode</button>
     </footer>
 
-
-
+    <script src="dark_light.js"></script>
 </body>
 </html>

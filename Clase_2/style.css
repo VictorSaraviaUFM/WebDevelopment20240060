@@ -145,3 +145,30 @@ section ul li {
 #contacto img:hover {
     transform: scale(1.1);
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #004080;
+    --secondary-color: #ccc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
+    --primary-color: #66ccff;
+    --secondary-color: #444;
+}

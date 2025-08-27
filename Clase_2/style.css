@@ -1,0 +1,109 @@
+/* ===== Reset Básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Configuración General ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* ===== Header Mejorado ===== */
+header {
+    display: flex;
+    flex-direction: column; /* Móviles */
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+/* Foto personal (WhatsApp) */
+header .foto-personal {
+    width: 200px; /* Más grande */
+    height: 200px;
+    object-fit: cover; /* Se ve completa */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+/* Logo UFM (más pequeño) */
+header .logo-ufm {
+    width: 100px;
+    height: auto;
+}
+
+/* Vista Desktop (fila horizontal) */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row; /* Foto y logo alineados */
+        justify-content: center;
+        gap: 30px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* ===== Secciones ===== */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #222;
+    border-bottom: 2px solid #004080;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+/* ===== Tablas ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #003366;
+}

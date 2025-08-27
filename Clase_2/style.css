@@ -107,3 +107,41 @@ button {
 button:hover {
     background-color: #003366;
 }
+
+
+/* Estilos creativos para Skills */
+section ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #e6f0ff;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: #004080;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+#contacto {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#contacto img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+}
+
+#contacto img:hover {
+    transform: scale(1.1);
+}

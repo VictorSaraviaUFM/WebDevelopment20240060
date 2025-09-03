@@ -232,3 +232,16 @@ body.dark-mode footer hr {
         font-size: 2rem;
     }
 }
+
+/* Badges más grandes para Skills */
+.skills .badge {
+    font-size: 1.1rem;   /* Aumenta tamaño de texto */
+    padding: 0.6em 1em;  /* Más espacio interno */
+}
+
+@media (max-width: 768px) {
+    .skills .badge {
+        font-size: 1rem;
+        padding: 0.5em 0.8em;
+    }
+}

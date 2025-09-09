@@ -44,3 +44,18 @@ function mostrarSaludo() {
   document.body.prepend(saludoEl);
 }
 mostrarSaludo();
+
+
+// 3. Botón mostrar/ocultar experiencia
+
+const expSection = document.querySelector("section.mb-4"); 
+if (expSection) {
+  const toggleExpBtn = document.createElement("button");
+  toggleExpBtn.textContent = "Show/Hide";
+  toggleExpBtn.className = "btn btn-secondary mb-3";
+  expSection.prepend(toggleExpBtn);
+
+  toggleExpBtn.addEventListener("click", () => {
+    expSection.querySelector(".accordion").classList.toggle("d-none");
+  });
+}

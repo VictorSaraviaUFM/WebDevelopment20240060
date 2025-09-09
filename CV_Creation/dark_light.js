@@ -59,3 +59,18 @@ if (expSection) {
     expSection.querySelector(".accordion").classList.toggle("d-none");
   });
 }
+
+
+// 4. Botón mostrar/ocultar contacto
+
+const footer = document.querySelector("footer");
+if (footer) {
+  const toggleContactBtn = document.createElement("button");
+  toggleContactBtn.textContent = "Show/Hide";
+  toggleContactBtn.className = "btn btn-warning btn-lg me-2";
+  footer.prepend(toggleContactBtn);
+
+  toggleContactBtn.addEventListener("click", () => {
+    footer.querySelector(".contact-buttons").classList.toggle("d-none");
+  });
+}

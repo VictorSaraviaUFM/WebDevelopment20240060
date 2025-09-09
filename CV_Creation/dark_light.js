@@ -74,3 +74,30 @@ if (footer) {
     footer.querySelector(".contact-buttons").classList.toggle("d-none");
   });
 }
+
+
+// 5. Buscador de habilidades
+
+function crearBuscadorSkills() {
+  const skillsContainer = document.querySelector("h2:nth-of-type(3)"); // Hard Skills
+  if (!skillsContainer) return;
+
+  const input = document.createElement("input");
+  input.type = "text";
+  input.placeholder = "Buscar habilidad...";
+  input.className = "form-control mb-3";
+  skillsContainer.after(input);
+
+  input.addEventListener("input", () => {
+    const filtro = input.value.toLowerCase();
+    const badges = document.querySelectorAll(".badge");
+    badges.forEach((badge) => {
+      if (badge.textContent.toLowerCase().includes(filtro)) {
+        badge.style.display = "inline-block";
+      } else {
+        badge.style.display = "none";
+      }
+    });
+  });
+}
+crearBuscadorSkills();

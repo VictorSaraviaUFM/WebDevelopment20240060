@@ -1,0 +1,247 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* Foto personal: aro ovalado conservando la imagen completa */
+.foto-personal {
+    width: 220px;               /* tamaño en desktop */
+    height: 220px;
+    object-fit: cover;          /* asegura que se vea completa sin deformar */
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50% / 40%;   /* OVALADO */
+    border: 4px solid #0d6efd;  /* color primario de Bootstrap */
+    padding: 2px;
+}
+
+/* Responsivo: tamaño más pequeño en pantallas pequeñas */
+@media (max-width: 768px) {
+    .foto-personal {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+.logo-ufm {
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #555;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+table caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    background-color: #007bff;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Info */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #ccc;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+footer hr {
+    margin: 10px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.contact-buttons .icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.contact-buttons .icon:hover {
+    transform: scale(1.1);
+}
+
+/* Botones del footer */
+/* Botones legacy (no afectan a .btn de Bootstrap) */
+button.legacy-btn {
+    background-color: #ff9800; 
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.legacy-btn:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode header h1,
+body.dark-mode h2 {
+    color: #fff;
+    border-bottom-color: #bbb;
+}
+
+body.dark-mode table {
+    border-color: #555;
+}
+
+body.dark-mode thead {
+    background-color: #333;
+}
+
+body.dark-mode th, 
+body.dark-mode td {
+    border-color: #555;
+}
+
+body.dark-mode .tag {
+    background-color: #28a745; 
+}
+
+body.dark-mode .tag:hover {
+    background-color: #19692c;
+}
+
+/* Darkmode Botón */
+body.dark-mode button {
+    background-color: #ff5722; 
+}
+
+body.dark-mode button:hover {
+    background-color: #e64a19;
+}
+
+body.dark-mode footer hr {
+    border-color: #555;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    .skills {
+        justify-content: center;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    .foto-personal {
+        width: 120px;
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Badges más grandes para Skills */
+.skills .badge {
+    font-size: 1.1rem;   /* Aumenta tamaño de texto */
+    padding: 0.6em 1em;  /* Más espacio interno */
+}
+
+@media (max-width: 768px) {
+    .skills .badge {
+        font-size: 1rem;
+        padding: 0.5em 0.8em;
+    }
+}

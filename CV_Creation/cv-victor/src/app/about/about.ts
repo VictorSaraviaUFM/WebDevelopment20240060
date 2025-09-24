@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { DataService } from '../services/data';
+import { DataService, Study } from '../services/data';
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html'
+  standalone: true,
+  templateUrl: './about.html',
+  styleUrl: './about.css'
 })
 export class AboutComponent {
-  studies = [];
+  studies: Study[] = [];
 
   constructor(private data: DataService) {
     this.studies = this.data.getStudies();

@@ -1,38 +1,27 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
-import { AppRoutingModule } from './app.routes';
-import { AppComponent } from './app';
 
 import { HeaderComponent } from './header/header';
 import { AboutComponent } from './about/about';
 import { SkillsComponent } from './skills/skills';
 import { ExperienceComponent } from './experience/experience';
-import { JobsComponent } from './experience/jobs/jobs';
-import { StudiesComponent } from './experience/studies/studies';
 import { FooterComponent } from './footer/footer';
 
-import { CapitalizePipe } from './pipes/capitalize-pipe';
-
-@NgModule({
-  declarations: [
-    AppComponent,
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
     HeaderComponent,
     AboutComponent,
     SkillsComponent,
     ExperienceComponent,
-    JobsComponent,
-    StudiesComponent,
-    FooterComponent,
-    CapitalizePipe
+    FooterComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class AppModule { }
+export class AppComponent {
+  title = 'Mi CV Angular';
+}

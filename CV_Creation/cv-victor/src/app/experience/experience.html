@@ -1,0 +1,16 @@
+<section class="mb-4">
+  <h2>Experiencia</h2>
+
+  <button (click)="toggleExperiencia()" class="btn btn-secondary mb-3">
+    {{ mostrarExperiencia ? 'Ocultar experiencia' : 'Mostrar experiencia' }}
+  </button>
+
+  <nav class="mb-2">
+    <a routerLink="jobs" routerLinkActive="active" class="me-2">Trabajos</a>
+    <a routerLink="studies" routerLinkActive="active">Estudios</a>
+  </nav>
+
+  <div *ngIf="mostrarExperiencia">
+    <router-outlet></router-outlet>
+  </div>
+</section>

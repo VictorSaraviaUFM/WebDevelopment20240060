@@ -1,0 +1,42 @@
+<section>
+  <h2>Educación</h2>
+  <table>
+    <caption>Historial Académico</caption>
+    <thead>
+      <tr>
+        <th>Institución</th>
+        <th>Año</th>
+        <th>Título</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of studies">
+        <td>{{ s.institution }}</td>
+        <td>{{ s.period }}</td>
+        <td>{{ s.degree }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Idiomas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Idioma</th>
+        <th>Nivel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Español</td>
+        <td>Nativo</td>
+      </tr>
+      <tr>
+        <td>Inglés</td>
+        <td>Avanzado (C1)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

@@ -1,1 +1,24 @@
-<p>footer works!</p>
+<footer>
+  <h2>Contact Info</h2>
+  <hr>
+
+  <button (click)="print()" id="download-pdf-btn" class="btn btn-primary btn-lg me-2">
+    📄 Descargar PDF
+  </button>
+
+  <button (click)="themeService.toggleTheme()" class="btn btn-lg" [ngClass]="(themeService.isDark$ | async) ? 'btn-light' : 'btn-outline-dark'">
+    {{ (themeService.isDark$ | async) ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+  </button>
+
+  <button (click)="toggleContact()" class="btn btn-warning btn-lg me-2">
+    {{ mostrarContacto ? 'Ocultar contacto' : 'Mostrar contacto' }}
+  </button>
+
+  <div *ngIf="mostrarContacto" class="contact-buttons mt-3">
+    <a href="mailto:victorsaravia@ufm.edu" target="_blank"><img src="assets/logo_mail.png" alt="mail" style="width:60px;height:60px;"></a>
+    <a href="https://github.com/VictorSaraviaUFM" target="_blank"><img src="assets/Github_logo.svg" alt="github" style="width:60px;height:60px;"></a>
+    <a href="https://www.linkedin.com/in/victor-saravia-75724937a/" target="_blank"><img src="assets/Linkedin_logo.webp" alt="linkedin" style="width:60px;height:60px;"></a>
+  </div>
+
+  <p class="mt-3">© Victor Saravia</p>
+</footer>

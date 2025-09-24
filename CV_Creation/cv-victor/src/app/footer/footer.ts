@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../services/theme';
 
 @Component({
   selector: 'app-footer',
-  imports: [],
-  templateUrl: './footer.html',
-  styleUrl: './footer.css'
+  templateUrl: './footer.component.html'
 })
-export class Footer {
+export class FooterComponent {
+  mostrarContacto = true;
 
+  constructor(public themeService: ThemeService) {}
+
+  toggleContact() {
+    this.mostrarContacto = !this.mostrarContacto;
+  }
+
+  print() {
+    window.print();
+  }
 }

@@ -1,1 +1,17 @@
-<p>studies works!</p>
+<h3>Lista de estudios</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Institución</th>
+      <th>Periodo</th>
+      <th>Título</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of studies">
+      <td>{{ s.institution }}</td>
+      <td>{{ s.period }}</td>
+      <td>{{ s.degree }}</td>
+    </tr>
+  </tbody>
+</table>

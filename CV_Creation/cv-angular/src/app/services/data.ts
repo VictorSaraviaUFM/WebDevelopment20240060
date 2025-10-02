@@ -16,8 +16,8 @@ export interface Study {
   providedIn: 'root'
 })
 export class DataService {
-  softSkills: string[] = ['Comunicación', 'Liderazgo', 'Trabajo en equipo', 'Resolución de problemas'];
-  hardSkills: string[] = ['C++', 'Python', 'HTML & CSS', 'Arduino', 'Angular', 'TypeScript', 'CSS'];
+  softSkills: string[] = ['Comunicación,', 'Liderazgo,', 'Trabajo en equipo y ', 'Resolución de problemas'];
+  hardSkills: string[] = ['C++,', 'Python,', 'HTML,', 'Arduino,', 'Angular y ', 'CSS'];
 
   jobs: Job[] = [
     {
@@ -37,7 +37,7 @@ export class DataService {
     { institution: 'Colegio Decroly Americano', period: '2012 - 2023', degree: 'Bachillerato en Ciencias y Letras' }
   ];
 
-  constructor() { }
+  constructor() {}
 
   getSoftSkills() { return this.softSkills; }
   getHardSkills() { return this.hardSkills; }

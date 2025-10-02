@@ -1,17 +1,9 @@
-<h3>Lista de estudios</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Institución</th>
-      <th>Periodo</th>
-      <th>Título</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let s of studies">
-      <td>{{ s.institution }}</td>
-      <td>{{ s.period }}</td>
-      <td>{{ s.degree }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="studies-list">
+    <div *ngFor="let study of studies" class="study-item mb-4 p-3 border rounded">
+        <h5 class="study-institution mb-2">{{ study.institution }}</h5>
+        <p class="study-degree text-primary mb-2">{{ study.degree }}</p>
+        <p class="study-period text-muted">
+            <i class="far fa-calendar"></i> {{ study.period }}
+        </p>
+    </div>
+</div>

@@ -7,15 +7,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './footer.html',
+  styleUrls: ['./footer.css']
 })
 export class FooterComponent {
-  mostrarContacto = true;
-
   constructor(public themeService: ThemeService) {}
-
-  toggleContact() {
-    this.mostrarContacto = !this.mostrarContacto;
-  }
 
   print() {
     window.print();

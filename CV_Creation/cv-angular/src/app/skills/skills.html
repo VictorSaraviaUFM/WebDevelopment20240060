@@ -1,12 +1,31 @@
-<section>
-  <h2>Soft Skills</h2>
-  <div class="skills mb-3">
-    <span *ngFor="let s of softSkills" class="tag">{{ s | capitalize }}</span>
-  </div>
-
-  <h2>Hard Skills</h2>
-  <input type="text" [(ngModel)]="filtro" placeholder="Buscar habilidad..." class="form-control mb-3">
-  <div class="skills">
-    <span *ngFor="let s of filteredHard" class="badge bg-secondary me-1">{{ s }}</span>
-  </div>
+<section class="skills-section">
+    <h2 class="text-center mb-5">🚀 Habilidades</h2>
+    
+    <div class="row">
+        <!-- Soft Skills -->
+        <div class="col-md-6 mb-4">
+            <div class="skills-card">
+                <h3 class="section-title">🌟 Soft Skills</h3>
+                <div class="skill-tags">
+                    <span *ngFor="let skill of softSkills" class="skill-tag soft-skill">
+                        {{ skill }}
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hard Skills -->
+        <div class="col-md-6 mb-4">
+            <div class="skills-card">
+                <h3 class="section-title">💻 Hard Skills</h3>
+                <div class="skill-tags">
+                    <span *ngFor="let skill of hardSkills" class="skill-tag hard-skill">
+                        {{ skill }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="skill-tags">
+</div>
 </section>

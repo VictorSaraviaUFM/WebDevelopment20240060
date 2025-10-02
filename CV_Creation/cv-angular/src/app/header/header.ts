@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   fotoUrl: string = './assets/foto_personal.webp';
-  logoUrl: string = './assets/logo_ufm.png';
+  logoUrl: string = 'https://www.ufm.edu/wp-content/uploads/2020/10/arreglo-ufm.png';
   saludo = '';
 
   ngOnInit(): void {

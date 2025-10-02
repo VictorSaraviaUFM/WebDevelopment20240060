@@ -1,24 +1,43 @@
-<footer>
-  <h2>Contact Info</h2>
-  <hr>
+<footer class="footer-section">
+  <div class="container">
+    <h2 class="footer-title">📞 Contact Info</h2>
+    
+    <div class="footer-buttons">
+      <button (click)="print()" class="btn btn-download">
+        <i class="fas fa-download"></i> Descargar PDF
+      </button>
+      
+      <button (click)="themeService.toggleTheme()" class="btn btn-theme">
+        <i class="fas" [class.fa-sun]="!(themeService.isDark$ | async)" [class.fa-moon]="(themeService.isDark$ | async)"></i>
+        {{ (themeService.isDark$ | async) ? 'Light Mode' : 'Dark Mode' }}
+      </button>
+    </div>
 
-  <button (click)="print()" id="download-pdf-btn" class="btn btn-primary btn-lg me-2">
-    📄 Descargar PDF
-  </button>
+    <div class="contact-links">
+      <a href="mailto:victorsaravia@ufm.edu" class="contact-link" title="Email">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <span>Email</span>
+      </a>
+      
+      <a href="https://linkedin.com/in/victor-saravia-75724937a/" target="_blank" class="contact-link" title="LinkedIn">
+        <div class="contact-icon">
+          <i class="fab fa-linkedin"></i>
+        </div>
+        <span>LinkedIn</span>
+      </a>
+      
+      <a href="https://github.com/VictorSaraviaUFM" target="_blank" class="contact-link" title="GitHub">
+        <div class="contact-icon">
+          <i class="fab fa-github"></i>
+        </div>
+        <span>GitHub</span>
+      </a>
+    </div>
 
-  <button (click)="themeService.toggleTheme()" class="btn btn-lg" [ngClass]="(themeService.isDark$ | async) ? 'btn-light' : 'btn-outline-dark'">
-    {{ (themeService.isDark$ | async) ? '☀️ Light Mode' : '🌙 Dark Mode' }}
-  </button>
-
-  <button (click)="toggleContact()" class="btn btn-warning btn-lg me-2">
-    {{ mostrarContacto ? 'Ocultar contacto' : 'Mostrar contacto' }}
-  </button>
-
-  <div *ngIf="mostrarContacto" class="contact-buttons mt-3">
-    <a href="mailto:victorsaravia@ufm.edu" target="_blank"><img src="assets/logo_mail.png" alt="mail" style="width:60px;height:60px;"></a>
-    <a href="https://github.com/VictorSaraviaUFM" target="_blank"><img src="assets/Github_logo.svg" alt="github" style="width:60px;height:60px;"></a>
-    <a href="https://www.linkedin.com/in/victor-saravia-75724937a/" target="_blank"><img src="assets/Linkedin_logo.webp" alt="linkedin" style="width:60px;height:60px;"></a>
+    <div class="footer-copyright">
+      <p>&copy; 2025 Victor Saravia. Todos los derechos reservados.</p>
+    </div>
   </div>
-
-  <p class="mt-3">© Victor Saravia</p>
 </footer>

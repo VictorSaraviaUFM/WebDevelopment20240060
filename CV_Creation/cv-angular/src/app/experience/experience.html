@@ -1,18 +1,21 @@
-<section class="mb-4">
-  <h2>Experiencia</h2>
-  <app-jobs></app-jobs>
-  <app-studies></app-studies>
-
-  <button (click)="toggleExperiencia()" class="btn btn-secondary mb-3">
-    {{ mostrarExperiencia ? 'Ocultar experiencia' : 'Mostrar experiencia' }}
-  </button>
-
-  <nav class="mb-2">
-    <a routerLink="jobs" routerLinkActive="active" class="me-2">Trabajos</a>
-    <a routerLink="studies" routerLinkActive="active">Estudios</a>
-  </nav>
-
-  <div *ngIf="mostrarExperiencia">
-    <router-outlet></router-outlet>
-  </div>
+<section class="experience-section">
+    <h2 class="text-center mb-5">💼 Experiencia y Educación</h2>
+    
+    <div class="row">
+        <!-- Experiencia Laboral -->
+        <div class="col-lg-6 mb-4">
+            <div class="experience-card">
+                <h3 class="section-title">🚀 Experiencia Laboral</h3>
+                <app-jobs></app-jobs>
+            </div>
+        </div>
+        
+        <!-- Educación -->
+        <div class="col-lg-6 mb-4">
+            <div class="experience-card">
+                <h3 class="section-title">🎓 Educación</h3>
+                <app-studies></app-studies>
+            </div>
+        </div>
+    </div>
 </section>

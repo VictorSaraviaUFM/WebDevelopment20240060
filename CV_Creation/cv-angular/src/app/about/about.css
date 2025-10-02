@@ -1,0 +1,42 @@
+.about-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #667eea;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-section h2 {
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section .lead {
+    font-size: 1.2rem;
+    color: #667eea;
+    font-weight: 500;
+}
+
+.about-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.dark-mode .about-section {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .about-section h2 {
+    color: white;
+}

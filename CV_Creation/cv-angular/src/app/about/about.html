@@ -1,42 +1,25 @@
-<section>
-  <h2>Educación</h2>
-  <table>
-    <caption>Historial Académico</caption>
-    <thead>
-      <tr>
-        <th>Institución</th>
-        <th>Año</th>
-        <th>Título</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let s of studies">
-        <td>{{ s.institution }}</td>
-        <td>{{ s.period }}</td>
-        <td>{{ s.degree }}</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<section>
-  <h2>Idiomas</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Idioma</th>
-        <th>Nivel</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Español</td>
-        <td>Nativo</td>
-      </tr>
-      <tr>
-        <td>Inglés</td>
-        <td>Avanzado (C1)</td>
-      </tr>
-    </tbody>
-  </table>
+<section class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="./assets/foto_personal.webp" alt="Victor Saravia" class="profile-img">
+      </div>
+      <div class="col-md-8">
+        <h2 class="mb-3">Sobre Mí</h2>
+        <p class="lead">
+          Soy un estudiante apasionado de Ingeniería en Ciencias de la Computación en la Universidad Francisco Marroquín, 
+          con un fuerte interés en el desarrollo de software y la innovación tecnológica.
+        </p>
+        <p>
+          Me encanta enfrentar desafíos técnicos y crear soluciones que impacten positivamente. 
+          Disfruto del proceso de aprendizaje continuo y me motiva trabajar en proyectos que 
+          combinen creatividad y lógica.
+        </p>
+        <p>
+          Cuando no estoy programando, me gusta explorar nuevas tecnologías, participar en 
+          proyectos de Arduino y mantenerme actualizado con las últimas tendencias en desarrollo web.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>

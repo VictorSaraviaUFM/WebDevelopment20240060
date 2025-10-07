@@ -1,0 +1,48 @@
+<section class="projects-section">
+  <div class="container">
+    <h2 class="text-center mb-5">🚀 Mis Proyectos</h2>
+    
+    <div *ngIf="loading" class="text-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando proyectos...</span>
+      </div>
+      <p class="mt-2">Cargando proyectos de GitHub...</p>
+    </div>
+
+    <div *ngIf="error" class="alert alert-danger text-center">
+      ❌ Error cargando proyectos: {{ error }}
+    </div>
+
+    <div class="row" *ngIf="!loading && !error">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let repo of projects">
+        <div class="project-card">
+          <div class="project-header">
+            <h5 class="project-title">{{ repo.name }}</h5>
+            <div class="project-stars">
+              ⭐ {{ repo.stargazers_count }}
+            </div>
+          </div>
+          
+          <p class="project-description">
+            {{ repo.description || 'Sin descripción disponible' }}
+          </p>
+          
+          <div class="project-tech">
+            <span class="tech-badge" *ngIf="repo.language">
+              {{ repo.language }}
+            </span>
+          </div>
+          
+          <div class="project-footer">
+            <a [href]="repo.html_url" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+            <small class="text-muted">
+              Actualizado: {{ repo.updated_at | date:'dd/MM/yyyy' }}
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

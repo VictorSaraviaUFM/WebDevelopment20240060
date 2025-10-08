@@ -1,6 +1,14 @@
 <header class="mb-3 text-center">
   <h2 style="text-align:center; margin-bottom:15px;">{{ saludo }}, bienvenido a mi CV</h2>
+
   <h1>Mi CV: Victor Saravia</h1>
+
+  <div class="quote-container" *ngIf="showQuote && dailyQuote.content">
+    <blockquote class="daily-quote">
+      "{{ dailyQuote.content }}"
+      <cite>- {{ dailyQuote.author }}</cite>
+    </blockquote>
+  </div>
 
   <img [src]="fotoUrl" alt="Foto personal" class="foto-personal img-fluid d-block mx-auto">
   <img [src]="logoUrl" alt="Logo UFM" class="logo-ufm">

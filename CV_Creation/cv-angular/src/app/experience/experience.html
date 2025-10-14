@@ -1,21 +1,98 @@
 <section class="experience-section">
-    <h2 class="text-center mb-5">💼 Experiencia y Educación</h2>
-    
-    <div class="row">
-        <!-- Experiencia Laboral -->
-        <div class="col-lg-6 mb-4">
-            <div class="experience-card">
-                <h3 class="section-title">🚀 Experiencia Laboral</h3>
-                <app-jobs></app-jobs>
-            </div>
-        </div>
-        
-        <!-- Educación -->
-        <div class="col-lg-6 mb-4">
-            <div class="experience-card">
-                <h3 class="section-title">🎓 Educación</h3>
-                <app-studies></app-studies>
-            </div>
-        </div>
+  <h2 class="text-center mb-5">🎓 Educación y Certificados</h2>
+  
+  <!-- Loading State -->
+  <div *ngIf="loading" class="text-center">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Cargando desde API...</span>
     </div>
+    <p class="mt-2">📡 Cargando datos desde la API...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="alert alert-danger text-center">
+    ❌ {{ error }}
+    <br>
+    <small>Asegúrate de que la API esté corriendo en http://localhost:3001</small>
+  </div>
+
+  <div class="row" *ngIf="!loading && !error">
+    <!-- Educación desde API -->
+    <div class="col-lg-6 mb-4">
+      <div class="experience-card">
+        <h3 class="section-title">📚 Educación</h3>
+        <p class="text-muted text-center">
+          <small>📡 Datos cargados desde API</small>
+        </p>
+        
+        <div class="education-list">
+          <div *ngFor="let edu of education" class="education-item mb-3 p-3 border rounded">
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="institution-name mb-1">{{ edu.institution }}</h5>
+              <button class="btn btn-sm btn-outline-secondary" (click)="updateEducationStatus(edu.id)">
+                ✏️
+              </button>
+            </div>
+            <p class="degree-text text-primary mb-1">{{ edu.degree }}</p>
+            <p class="period-text text-muted mb-1">
+              <i class="far fa-calendar"></i> {{ edu.period }}
+            </p>
+            <span class="badge" [ngClass]="{
+              'bg-success': edu.status === 'Completado',
+              'bg-warning': edu.status === 'En curso' || edu.status === 'En pausa',
+              'bg-info': edu.status === 'Actualizado via API'
+            }">
+              {{ edu.status }}
+            </span>
+            <small class="d-block mt-1 text-muted">
+              <i class="fas fa-map-marker-alt"></i> {{ edu.location }}
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Certificados desde API -->
+    <div class="col-lg-6 mb-4">
+      <div class="experience-card">
+        <h3 class="section-title">🏆 Certificados</h3>
+        <p class="text-muted text-center">
+          <small>📡 Datos cargados desde API</small>
+        </p>
+        
+        <div class="certificates-list">
+          <div *ngFor="let cert of certificates" class="certificate-item mb-3 p-3 border rounded">
+            <h6 class="certificate-name">{{ cert.name }}</h6>
+            <p class="institution-text mb-1">
+              <i class="fas fa-university"></i> {{ cert.institution }}
+            </p>
+            <p class="date-text text-muted mb-1">
+              <i class="far fa-calendar"></i> Emitido: {{ cert.issueDate }}
+            </p>
+            <div class="skills-tags mb-2">
+              <span *ngFor="let skill of cert.skills" class="skill-tag hard-skill">
+                {{ skill }}
+              </span>
+            </div>
+            <a *ngIf="cert.credentialURL" [href]="cert.credentialURL" target="_blank" class="btn btn-sm btn-outline-primary">
+              <i class="fas fa-external-link-alt"></i> Ver Credencial
+            </a>
+            <small *ngIf="!cert.credentialURL" class="text-muted">URL no disponible</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de demostración API -->
+  <div class="text-center mt-4" *ngIf="!loading && !error">
+    <div class="demo-buttons">
+      <button class="btn btn-success me-2" (click)="addNewEducation()">
+        <i class="fas fa-plus"></i> Agregar Educación (POST)
+      </button>
+      <small class="d-block text-muted mt-2">
+        🔥 Demostración: Estos botones interactúan con tu API local
+      </small>
+    </div>
+  </div>
 </section>
